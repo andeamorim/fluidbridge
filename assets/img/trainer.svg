@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Illustration of a Kinetic fluid trainer seen from the back, with the inRide sensor next to the flywheel">
+  <defs>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6fa82d"/>
+      <stop offset="0.5" stop-color="#9ad44b"/>
+      <stop offset="1" stop-color="#6fa82d"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8e8ed"/>
+      <stop offset="0.5" stop-color="#a1a1a6"/>
+      <stop offset="1" stop-color="#6e6e73"/>
+    </linearGradient>
+    <linearGradient id="disc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8e8e93"/>
+      <stop offset="0.45" stop-color="#f5f5f7"/>
+      <stop offset="1" stop-color="#8e8e93"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.55" r="0.5">
+      <stop offset="0" stop-color="#8dc63f" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#8dc63f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="320" cy="300" rx="300" ry="230" fill="url(#glow)"/>
+  <ellipse cx="320" cy="488" rx="230" ry="16" fill="#000" opacity="0.6"/>
+
+  <!-- legs -->
+  <path d="M150 170 L70 450" stroke="url(#frame)" stroke-width="30" stroke-linecap="round"/>
+  <path d="M490 170 L570 450" stroke="url(#frame)" stroke-width="30" stroke-linecap="round"/>
+  <ellipse cx="68" cy="458" rx="26" ry="20" fill="#1c1c1e"/>
+  <ellipse cx="572" cy="458" rx="26" ry="20" fill="#1c1c1e"/>
+
+  <!-- U frame -->
+  <path d="M150 110 L150 400 Q150 470 220 470 L420 470 Q490 470 490 400 L490 110" fill="none" stroke="url(#frame)" stroke-width="40" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="236" y="472" width="168" height="16" rx="6" fill="#1c1c1e"/>
+
+  <!-- axle clamps -->
+  <rect x="96" y="92" width="44" height="40" rx="12" fill="#1c1c1e"/>
+  <rect x="500" y="92" width="44" height="40" rx="12" fill="#1c1c1e"/>
+  <rect x="170" y="104" width="70" height="16" rx="4" fill="url(#metal)"/>
+  <rect x="400" y="104" width="70" height="16" rx="4" fill="url(#metal)"/>
+
+  <!-- resistance unit bracket -->
+  <path d="M276 300 L364 300 L364 470 L276 470 Z" fill="#1c1c1e"/>
+
+  <!-- fluid unit (finned) -->
+  <g>
+    <rect x="186" y="246" width="120" height="132" rx="18" fill="url(#metal)"/>
+    <g stroke="#6e6e73" stroke-width="3">
+      <line x1="186" y1="266" x2="306" y2="266"/><line x1="186" y1="284" x2="306" y2="284"/>
+      <line x1="186" y1="302" x2="306" y2="302"/><line x1="186" y1="320" x2="306" y2="320"/>
+      <line x1="186" y1="338" x2="306" y2="338"/><line x1="186" y1="356" x2="306" y2="356"/>
+    </g>
+  </g>
+
+  <!-- roller -->
+  <rect x="300" y="276" width="96" height="62" rx="10" fill="url(#metal)"/>
+
+  <!-- flywheel disc -->
+  <rect x="396" y="228" width="24" height="158" rx="11" fill="url(#disc)"/>
+
+  <!-- inRide sensor pod -->
+  <g>
+    <rect x="356" y="350" width="58" height="72" rx="12" fill="#2c2c2e" stroke="#8dc63f" stroke-width="3"/>
+    <circle cx="385" cy="374" r="11" fill="none" stroke="#8dc63f" stroke-width="2.5"/>
+    <path d="M388 394 L380 406 L386 406 L382 416 L392 402 L386 402 Z" fill="#8dc63f"/>
+  </g>
+
+  <!-- tension knob -->
+  <circle cx="320" cy="420" r="20" fill="#8dc63f"/>
+  <circle cx="320" cy="420" r="8" fill="#1c1c1e"/>
+
+  <!-- callout -->
+  <path d="M414 386 L470 300 L620 300" fill="none" stroke="#8dc63f" stroke-width="2" stroke-dasharray="5 5"/>
+  <circle cx="414" cy="386" r="5" fill="#8dc63f"/>
+  <text x="612" y="290" fill="#f5f5f7" font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="600">inRide sensor</text>
+</svg>
