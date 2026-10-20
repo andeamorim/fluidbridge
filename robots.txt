@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://andeamorim.github.io/fluidbridge/sitemap.xml
