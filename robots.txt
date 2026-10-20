@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://andeamorim.github.io/fluidbridge/sitemap.xml
+Sitemap: https://www.surround.services/fluidbridge/sitemap.xml

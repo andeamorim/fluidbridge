@@ -6,3 +6,4 @@ cd "$(dirname "$0")/.."
 git subtree split --prefix site -b site-publish
 git push https://github.com/andeamorim/fluidbridge.git site-publish:main --force
 git branch -D site-publish
+echo "Published to https://github.com/andeamorim/fluidbridge. surround.services/fluidbridge copies from there: tell its agent to sync (see site/HANDOFF-surround-services.md)."
