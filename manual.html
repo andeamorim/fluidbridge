@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FluidBridge Manual</title>
+<meta name="description" content="How to use FluidBridge for Kinetic inRide: setup, the bridge, rides, zones, calibration, settings and troubleshooting.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/icon-180.png">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/img/icon-180.png" alt="">FluidBridge</a>
+    <nav class="links">
+      <a class="wide" href="./#how">How it works</a>
+      <a class="wide" href="./#compatibility">Compatibility</a>
+      <a href="manual.html" aria-current="page">Manual</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap doc">
+  <nav class="toc" aria-label="Contents">
+    <a href="#start">Quick start</a>
+    <a class="wide" href="#compatibility">Compatibility</a>
+    <a href="#main">The main screen</a>
+    <a href="#bridge">The bridge</a>
+    <a href="#heart-rate">Heart rate</a>
+    <a href="#rides">Rides</a>
+    <a href="#summary">Summary and zones</a>
+    <a href="#activities">Activities and export</a>
+    <a href="#calibration">Calibration</a>
+    <a href="#settings">Settings</a>
+    <a href="#trial">Free trial and full version</a>
+    <a href="#troubleshooting">Troubleshooting</a>
+    <a href="#privacy">Privacy</a>
+  </nav>
+
+  <article>
+    <h1>FluidBridge manual</h1>
+    <p>FluidBridge turns your Android phone into a Bluetooth <strong>power meter</strong> for your Kinetic fluid trainer.
+      It reads the <strong>Kinetic inRide</strong> sensor, shows your power, speed and cadence, sends them to your cycling
+      app, and records your rides. No account. No cloud. Your data stays on your phone.</p>
+
+    <h2 id="start">Quick start</h2>
+    <ol>
+      <li><strong>Wake the sensor.</strong> Spin the rear wheel so the inRide pod wakes up. Close Kinetic Fit and any other
+        app that uses the pod: the inRide talks to one app at a time.</li>
+      <li><strong>Open FluidBridge</strong> and allow Bluetooth (nearby devices) and notifications.</li>
+      <li><strong>Choose your inRide</strong> in <kbd>Settings → inRide sensor</kbd>. It is marked with a green "inRide"
+        tag. You do this once.</li>
+      <li><strong>Pedal.</strong> Power, speed and cadence appear right away. Nothing else to start.</li>
+      <li><strong>Ride in a cycling app</strong> (optional): turn on the <kbd>Bridge</kbd> switch, then pair the power
+        meter in your cycling app.</li>
+      <li><strong>Record the ride</strong> (optional): tap <kbd>Start ride</kbd>, and <kbd>Finish</kbd> when you are done.</li>
+      <li><strong>Better numbers</strong> (optional): enter your FTP, weight and heart rate in <kbd>Settings</kbd>.</li>
+    </ol>
+    <div class="callout"><strong>No trainer at hand?</strong> Turn on <kbd>Settings → Testing → Demo mode</kbd>. The app
+      simulates realistic power and heart rate, so you can try every screen and test the connection to your cycling app.</div>
+
+    <h2 id="compatibility">Compatibility</h2>
+    <h3>Sensor and trainer</h3>
+    <p>FluidBridge speaks Kinetic's own inRide Bluetooth protocol, with the power formula from Kinetic's open-source
+      decoder. Kinetic has phased the inRide 2 out of its new app and of some third-party training apps; FluidBridge
+      makes it a standard Bluetooth power meter again.</p>
+    <table>
+      <thead><tr><th>Sensor or trainer</th><th>FluidBridge</th></tr></thead>
+      <tbody>
+        <tr><td>inRide 2 (black, Bluetooth only), as fitted on the Road Machine Smart and Rock and Roll Smart (first generation)</td><td class="ok">Works</td></tr>
+        <tr><td>inRide kit added to a classic Road Machine, Rock and Roll or Pro fluid trainer</td><td class="ok">Works</td></tr>
+        <tr><td>inRide 3 (green), also on the Road Machine Smart 2 and Rock and Roll Smart 2</td><td class="ok">Works, tested</td></tr>
+        <tr><td>Standard and Pro flywheel</td><td class="ok">Works, detected from the calibration</td></tr>
+        <tr><td>Kinetic Smart Control trainers (R1 and others)</td><td class="no">Not needed</td></tr>
+        <tr><td>First inRide (2012, "Powered by Wahoo" on the back)</td><td class="no">Not tested</td></tr>
+        <tr><td>Other brands</td><td class="no">No</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Battery:</strong> the pod runs on a coin-cell battery (the round type used on computer motherboards). A
+      weak battery causes dropouts: if the numbers freeze or the pod keeps reconnecting, replace it first.</p>
+
+    <h3>Phone</h3>
+    <ul>
+      <li>Android 8.0 or newer with Bluetooth LE. Health Connect needs Android 9 or newer.</li>
+      <li>The bridge needs a phone that can <strong>advertise</strong> over Bluetooth LE (peripheral mode). Most phones
+        since 2017 can. If yours cannot, the app says so, and live numbers and ride recording still work.</li>
+      <li>Tested on a Samsung Galaxy S20 FE. Some phones struggle to read the sensor and advertise at the same time:
+        Demo mode is the quickest way to check yours.</li>
+    </ul>
+
+    <h3>Cycling apps</h3>
+    <p>Any cycling app that pairs a <strong>Bluetooth power meter</strong> (Cycling Power) should work, on a computer,
+      tablet, phone or TV. Tested with MyWhoosh on a Mac. The phone appears as a power meter, not as a smart trainer:
+      the cycling app cannot change the resistance (a fluid trainer cannot do that anyway).</p>
+
+    <h2 id="main">The main screen</h2>
+    <div class="shots">
+      <figure><div class="phone small"><img src="assets/img/1-ride.jpg" alt="Main screen while riding"></div><figcaption>While riding</figcaption></figure>
+      <figure><div class="phone small"><img src="assets/img/2-lap-bridge.jpg" alt="Lap, controls and bridge"></div><figcaption>Lap, controls and bridge</figcaption></figure>
+    </div>
+    <ul>
+      <li><strong>Status</strong>: inRide, heart rate and Bridge, each with a dot (green = working, orange = waiting,
+        gray = off). Tap them to open Settings. While recording, a <strong>● REC</strong> or <strong>PAUSED</strong> tag.
+        Then <strong>Activities</strong> (list icon) and <strong>Settings</strong> (gear).</li>
+      <li><strong>Warnings</strong>, only when needed: Bluetooth is off, or battery optimization could stop the app with
+        the screen off.</li>
+      <li><strong>Power</strong>: the average of the last 3 seconds, W/kg with your weight, and your power zone with your
+        FTP. A "coasting" tag shows when you stop pedaling.</li>
+      <li><strong>Heart rate</strong> and <strong>Speed</strong>, then the <strong>heart rate zone</strong> (Z1 to Z5).</li>
+      <li><strong>Fields</strong>: time, distance, cadence, average power, calories and average heart rate of the ride.</li>
+      <li><strong>Lap</strong> (while riding): tap the card to start a new lap.</li>
+      <li><strong>Start ride</strong>, or <strong>Pause</strong> / <strong>Finish</strong> while riding.</li>
+      <li><strong>Bridge</strong> switch.</li>
+    </ul>
+
+    <h2 id="bridge">The bridge</h2>
+    <p>Turn on the <kbd>Bridge</kbd> switch and your phone appears as a <strong>power meter</strong> and a <strong>heart
+      rate monitor</strong>, named after your phone's Bluetooth name.</p>
+    <ol>
+      <li>Turn the bridge on with FluidBridge on screen.</li>
+      <li>In your cycling app, open its pairing screen and choose your phone as the <strong>power</strong> source (and as
+        the <strong>heart rate</strong> source if you use a strap).</li>
+      <li>Pair inside the cycling app, <strong>not</strong> in the computer's Bluetooth settings.</li>
+    </ol>
+    <p>The status next to the switch shows <em>waiting for the cycling app</em> until it connects, then <em>cycling app
+      receiving</em>. The bridge keeps running with the screen off; a notification shows your numbers and a Stop button.
+      If the phone stops the app, the bridge comes back by itself when it restarts.</p>
+    <div class="callout"><strong>Tip:</strong> if your cycling app does not list the phone, turn on Demo mode and try
+      again. If it still does not appear, the issue is the phone's or the computer's Bluetooth, not the trainer.</div>
+
+    <h2 id="heart-rate">Heart rate</h2>
+    <p>Choose a chest strap, armband, or a watch or app that broadcasts heart rate over Bluetooth in
+      <kbd>Settings → Heart rate sensor</kbd>. Wear it (or start broadcasting) so it shows up. FluidBridge shows it live,
+      records it, puts it in .FIT files and, with the bridge on, passes it to your cycling app in the same connection.
+      Most straps accept one connection only, so letting FluidBridge relay it works better than pairing it twice.</p>
+    <p>Heart rate zones need your <strong>max heart rate</strong>. The default <strong>Automatic</strong> zones also use
+      your <strong>resting heart rate</strong> (heart rate reserve, the method most sports watches use). You can also
+      choose <strong>% of max heart rate</strong> or <strong>Custom</strong> starts for each zone.</p>
+    <div class="shots">
+      <figure><div class="phone small"><img src="assets/img/zones.jpg" alt="Heart rate zones settings"></div><figcaption>Settings → Heart rate zones</figcaption></figure>
+      <figure><div class="phone small"><img src="assets/img/settings2.jpg" alt="Settings"></div><figcaption>Settings</figcaption></figure>
+    </div>
+
+    <h2 id="rides">Rides</h2>
+    <p>You can record a ride with or without the bridge.</p>
+    <ul>
+      <li><strong>Start ride</strong> begins recording (a live sensor or Demo mode is needed).</li>
+      <li><strong>Pause / Resume</strong> stops and restarts the clock.</li>
+      <li><strong>Auto-pause</strong> (on by default): the clock stops when the roller stays below 3 km/h (2 mph) for 5
+        seconds and restarts as soon as you pedal.</li>
+      <li><strong>Lap</strong>: tap the lap card. The phone vibrates and a banner shows the lap you just closed.</li>
+      <li><strong>Finish</strong> asks <em>Finish and save</em>, <em>Discard</em> (asked twice) or <em>Keep going</em>,
+        then opens the summary.</li>
+      <li>Every ride is saved as you go: if the phone stops the app, you lose at most a few seconds.</li>
+    </ul>
+    <div class="callout"><strong>Riding in a cycling app?</strong> If your cycling app already records and uploads the
+      ride, you do not need to record it in FluidBridge too, or you will have it twice.</div>
+
+    <h2 id="summary">Summary and zones</h2>
+    <div class="shots">
+      <figure><div class="phone small"><img src="assets/img/4-summary.jpg" alt="Ride summary"></div><figcaption>Summary</figcaption></figure>
+      <figure><div class="phone small"><img src="assets/img/5-zones.jpg" alt="Zones and laps"></div><figcaption>Zones and laps</figcaption></figure>
+    </div>
+    <table>
+      <thead><tr><th>Number</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>Moving time</td><td>Time that counted, pauses excluded</td></tr>
+        <tr><td>Distance, avg speed</td><td>Measured on the roller</td></tr>
+        <tr><td>kcal</td><td>Estimated energy your body burned (close to the kJ of work: the body is about 24% efficient)</td></tr>
+        <tr><td>avg W</td><td>Average power, coasting counted as 0 W</td></tr>
+        <tr><td>NP</td><td>Normalized power: closer to how hard the ride felt</td></tr>
+        <tr><td>TSS · IF</td><td>Training stress (one hour at FTP = 100) and intensity (NP ÷ FTP)</td></tr>
+        <tr><td>W/kg, Max 5 s, work</td><td>Power per kg, best 5-second power, energy at the pedals</td></tr>
+        <tr><td>Power &amp; heart rate</td><td>Chart of power (5-second smoothing) and heart rate over the ride</td></tr>
+        <tr><td>Time in zones</td><td>Heart rate zones (Z1–Z5) and power zones (Z1 Recovery … Z7 Neuromuscular, from your FTP)</td></tr>
+        <tr><td>Laps</td><td>Time, average and max power, cadence and heart rate of each lap</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Don't know your FTP?</strong> A common estimate is 95% of your best 20-minute average power.</p>
+    <p><strong>Why the distance differs from your cycling app:</strong> FluidBridge measures the roller; the cycling app
+      computes a virtual speed from your power, weight and the route. Both are right.</p>
+
+    <h2 id="activities">Activities and export</h2>
+    <div class="shots">
+      <figure><div class="phone small"><img src="assets/img/3-activities.jpg" alt="Activities"></div><figcaption>Activities</figcaption></figure>
+    </div>
+    <p><strong>Activities</strong> shows this week's and this month's totals, then your rides by month. Tap a ride for
+      its summary. In the summary:</p>
+    <ul>
+      <li><strong>Sync with Health Connect</strong> writes the ride to Health Connect (allow it once in Settings).</li>
+      <li><kbd>⋮ → Share .FIT</kbd> sends the file to another app; <kbd>⋮ → Save .FIT to phone</kbd> saves it to a folder.</li>
+      <li><kbd>⋮ → Delete</kbd> always asks for confirmation and cannot be undone. It does not remove the ride from Health
+        Connect.</li>
+    </ul>
+    <p><strong>Strava:</strong> save or share the .FIT file, then upload it at strava.com → Upload activity → File. The
+      .FIT file also works with Garmin Connect, TrainingPeaks, Intervals.icu, Golden Cheetah and most platforms.</p>
+
+    <h2 id="calibration">Calibration (spindown)</h2>
+    <p>Power from a fluid trainer depends on how hard the roller presses on the tire. The inRide measures it with a
+      <strong>spindown</strong>: you speed up, stop pedaling, and it times how long the wheel takes to slow down.
+      Find it in <kbd>Settings → inRide sensor</kbd>, which shows the value stored in your pod:</p>
+    <table>
+      <thead><tr><th>Shown</th><th>What to do</th></tr></thead>
+      <tbody>
+        <tr><td class="ok">Valid (1.50–2.00 s, or 4.70–6.50 s with a Pro flywheel)</td><td>Nothing</td></tr>
+        <tr><td>Not calibrated</td><td>The 1.75 s default is used. Calibrate for accurate power.</td></tr>
+        <tr><td>Too fast</td><td>Loosen the roller a little and calibrate again</td></tr>
+        <tr><td>Too slow</td><td>Tighten the roller a little and calibrate again</td></tr>
+      </tbody>
+    </table>
+    <ol>
+      <li>Ride about 10 minutes first, so the tire is warm, with the roller pressure you ride with.</li>
+      <li>Tap <kbd>Calibrate now</kbd>.</li>
+      <li>Sprint until the screen turns red and says <strong>STOP</strong>, then stop pedaling completely and let the wheel
+        coast. Do not brake.</li>
+      <li>The result shows while the wheel is still slowing down, and is saved in the pod.</li>
+    </ol>
+    <p>It matters: at 30 km/h, a 1.5 s spindown gives about 260 W and a 2.0 s spindown about 193 W.</p>
+
+    <h2 id="settings">Settings</h2>
+    <table>
+      <thead><tr><th>Setting</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>inRide sensor</td><td>Choose or change the sensor; calibration</td></tr>
+        <tr><td>Units</td><td>Metric (km, km/h, kg) or Imperial (mi, mph, lb)</td></tr>
+        <tr><td>FTP, weight</td><td>Enable zones, IF, TSS and W/kg</td></tr>
+        <tr><td>Heart rate sensor</td><td>Optional strap, watch or broadcaster app</td></tr>
+        <tr><td>Max and resting heart rate, zones</td><td>Heart rate zones</td></tr>
+        <tr><td>Health Connect</td><td>Allow FluidBridge to save rides there</td></tr>
+        <tr><td>Auto-pause</td><td>On or off</td></tr>
+        <tr><td>Background use</td><td>Lets the bridge run with the screen off. Tap to allow.</td></tr>
+        <tr><td>Full version</td><td>Trial days left, unlock, restore</td></tr>
+        <tr><td>Demo mode</td><td>Simulated sensor for testing</td></tr>
+        <tr><td>Event log</td><td>Technical messages, useful when something does not work</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="trial">Free trial and full version</h2>
+    <div class="shots">
+      <figure><div class="phone small"><img src="assets/img/trial.jpg" alt="Free trial card"></div><figcaption>Trial card</figcaption></figure>
+      <figure><div class="phone small"><img src="assets/img/unlock.jpg" alt="Full version purchase"></div><figcaption>Full version</figcaption></figure>
+    </div>
+    <p>Everything works for <strong>14 days</strong> from the first time you open the app; a card at the top shows the
+      days left. After that, live numbers, calibration and your saved rides stay free, and a <strong>one-time
+      purchase</strong> (US$ 5.99 on Google Play, no subscription) keeps the bridge and ride recording. A ride or bridge
+      already running is never stopped.</p>
+    <p>Tap <kbd>Unlock</kbd> on the card or in <kbd>Settings → Full version</kbd>. On a new phone, the purchase comes back
+      by itself; or tap <kbd>Already bought? Restore</kbd>.</p>
+
+    <h2 id="troubleshooting">Troubleshooting</h2>
+    <table>
+      <thead><tr><th>Problem</th><th>Try</th></tr></thead>
+      <tbody>
+        <tr><td>The sensor is not found</td><td>Spin the wheel to wake it. Close Kinetic Fit and other apps that use the pod. Move the phone closer. Check the pod's battery.</td></tr>
+        <tr><td>The cycling app does not list the phone</td><td>Turn the bridge on with FluidBridge on screen. Pair inside the cycling app, not in the computer's Bluetooth settings; remove the phone there if you paired it. Try Demo mode.</td></tr>
+        <tr><td>Power seems too high or too low</td><td>Calibrate with a warm tire and your usual roller pressure.</td></tr>
+        <tr><td>Cadence jumps a little</td><td>Normal: the inRide estimates cadence from the roller.</td></tr>
+        <tr><td>The bridge stops with the screen off</td><td>Settings → Background use → allow. On Samsung phones also make sure FluidBridge is not in "Sleeping apps".</td></tr>
+        <tr><td>Numbers show "--"</td><td>No sensor chosen, or the sensor is asleep: spin the wheel.</td></tr>
+      </tbody>
+    </table>
+    <p>Still stuck? Write to <a href="mailto:appssurround@gmail.com">appssurround@gmail.com</a> with your phone model and
+      a copy of <kbd>Settings → Event log</kbd>.</p>
+
+    <h2 id="privacy">Privacy</h2>
+    <p>FluidBridge has no internet access. No account, no ads, no analytics. Your settings and rides stay on your phone;
+      Android's own backup can keep a copy in your Google account if you turn it on.
+      <a href="privacy.html">Read the privacy policy</a>.</p>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong style="color:#f5f5f7">FluidBridge for Kinetic inRide</strong>
+      <p>Kinetic, inRide and MyWhoosh are trademarks of their owners. FluidBridge is an independent app, not affiliated
+        with or endorsed by them.</p>
+    </div>
+    <nav>
+      <a href="./">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:appssurround@gmail.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
